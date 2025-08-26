@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Knit",
+      "type": "shell",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "rmarkdown::render(\"${file}\", output_format=\"pdf_document\", output_file=file.path(dirname(\"${fileDirname}\"), \"output.pdf\"))"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent", // don't show terminal on success
+        "revealProblems": "onProblem", // show if errors/warnings
+        "focus": false, // don't steal focus
+        "panel": "dedicated", // reuse the same panel
+        "showReuseMessage": false, // don't spam reuse messages
+        "clear": true // clear terminal each run
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+---
+title: ""
+author: ""
+date: ""
+output: 
+  pdf_document:
+    includes:
+      in_header: "../header.tex"
+output_file: ../output.pdf
+header-includes:
+  - \renewcommand{\mytitle}{TITLE title Title TiTlE tItLe TItLE tiTlE}
+  - \renewcommand{\myauthor}{Annie Lytics}
+---
+
+\thispagestyle{firstpage}
+\UNsection{\mytitle}{1.5}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dev = "cairo_pdf")
+# Set working directory to the template directory
+setwd(dirname(normalizePath(knitr::current_input())))
+```
+
+Imports
+```{r message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(snazzieR)
+```
+
+\begin{proofline}
+  This is a proof line.
+
+  \begin{proofline}
+  This is a nested proof line.
+\end{proofline}
+\end{proofline}
