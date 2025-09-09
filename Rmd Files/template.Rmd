@@ -21,18 +21,84 @@ knitr::opts_chunk$set(echo = TRUE, dev = "cairo_pdf")
 setwd(dirname(normalizePath(knitr::current_input())))
 ```
 
-Imports
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 library(ggplot2)
 library(dplyr)
 library(gridExtra)
 library(snazzieR)
 ```
 
-\begin{proofline}
-  This is a proof line.
+1. An investigator is interested in estimating the total number of “count trees”(trees larger than a specified size) on a farm of 1000 acres. This information is used to estimate the total volume of lumber for trees on the farm and may be used to determine the amount to be paid to the owner for harvesting trees on this farm. A simple random sample of 100 1-acre plots was selected and each plot was examined for the number of count trees. The sample average for the 100 1-acre plots was 25.2 and the sample variance was 136
 
-  \begin{proofline}
-  This is a nested proof line.
+\begin{proofline}
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Estimate the total number of count trees on the farm
+\item Place a bound on the error of estimation
+\item Use the results of this survey to determine the sample size required to estimate the total with a bound on the error of estimation of 1500
+\end{enumerate}
 \end{proofline}
+
+1. An opinion poll on education questioned 1684 adults across the United States. For results dealing with proportions of respondents favoring certain issues the poll is reported to have a 6% margin of error. Do you agree? Discuss why or why not.
+
+2. A study in a small town calls for estimating the proportion of households that contain at least one member over the age of 65. The town has 621 households . A simple random sample of 60 households was selected. 11 of the households in the sample contained at least one member over the age of 65. Estimate the true population proportion and place a bound on the error of estimation.
+
+3. In exercise 4, how large of a sample should be taken to estimate the population proportion with a bound of .05 on the error of estimation in two situations:
+
+\begin{proofline}
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Find a conservative estimate assuming no knowledge of the true proportion p
+\item Find a more realistic estimate assuming that p is relatively small (around p=.2)
+\item Which of the above assumptions do you think is more reasonable?Give a reason for your answer
+\end{enumerate}
+\end{proofline}
+
+
+
+1. A forester wants to estimate the total number of farm acres planted with trees for a state. Because the number of acres of trees varies considerably with the size of the farm he decides to stratify on farm size. The 240 farms in the state are classified into one of 4 categories according to size. A stratified random sample of 40 farms, selected by using proportional allocation yields the results shown in the table below on the number of acres planted in trees.
+
+\begin{proofline}
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Estimate the total number of acres of trees on farms in the state and place a bound on the error of estimation.
+\item Graph the data on an appropriate plot and comment on the variation as we move from Stratum 1 to Stratum 4.
+\begin{center}
+  \begin{minipage}{0.5\textwidth}
+      \begin{tabular}{lcccc}
+      \toprule
+      & Strat I & Strat II & Strat III & Strat IV \\
+      \midrule
+      & N=86 & N=86 & N=86 & N=86 \\
+      \midrule
+      & 97  & 125 & 142 & 167 \\
+      & 67  & 155 & 256 & 655 \\
+      & 42  & 67  & 310 & 220 \\
+      & 125 & 96  & 440 & 540 \\
+      & 25  & 256 & 495 & 780 \\
+      & 92  & 47  & 510 &      \\
+      & 105 & 310 & 320 &      \\
+      & 86  & 236 & 396 &      \\
+      & 27  & 220 & 196 &      \\
+      & 43  & 352 &      &      \\
+      & 45  & 142 &      &      \\
+      & 59  & 190 &      &      \\
+      & 53  &      &      &      \\
+      & 21  &      &      &      \\
+      \bottomrule
+    \end{tabular}
+  \end{minipage}
+\end{center}
+\item The study above is to be repeated yearly and a bound on the error of
+estimation of 5000 would be useful. Find an approximate sample size to achieve
+this bound if Neyman Allocation is used. Allocate this sample to the 4 strata.
+\end{enumerate}
+\end{proofline}
+
+1. Government is interested in expanding the facilities of a day-care center for mentally retarded children. A sample survey will be conducted to estimate the proportion of families with retarded children that will make use of the expanded facilities. The families are divided into those that use the existing facilities andthose that do not. Some families live in the city in which the center is located and some live in rural areas. This, stratified sampling is used with 4 strata: (1)Users in the city, (2) users in rural areas, (3)nonusers in city and (4)nonusers in rural areas. It is estimated (guessed) that 90\% of present users and 50\% of present nonusers will use the expanded facilities. The cost of obtaining an observation from a user is \$4 and from a nonuser is \$8. Existing records give strata sizes N1=97, N2=43, N3=145, and N4=68
+
+\begin{proofline}
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Find the approximate sample size and allocation necessary to estimate the population proportion with a bound of .05 on the error of estimation
+\item Suppose the survey is conducted with the sample sizes in \textbf{a.} and yields the following proportions p1 = .87, p2=.93, p3=.6 and p4=.53 Estimate the population proportion and place a bound on the error of estimation. Was
+the desired bound achieved?
+\item Suppose the total cost of sampling is fixed at \$400. Choose the sample size and allocation that minimizes the variance of the estimator at this fixed cost.
+\end{enumerate}
 \end{proofline}
